@@ -1,16 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Operators from './components/Operators';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Operators />
+    </Provider>
   );
-}
-
+};
 export default App;
