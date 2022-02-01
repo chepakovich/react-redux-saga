@@ -35,7 +35,7 @@ const Operators = ({
   const hadleChange = (e) => {
     const searchQuery = e.target.value;
     setSearchQuery(searchQuery);
-    const newlyFiltered = _.filter(filteredOperators, (operator) =>
+    const newlyFiltered = _.filter(operators, (operator) =>
       operator.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredOperators(newlyFiltered);
